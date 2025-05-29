@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
 }
 
 
-/* Header styles */
+/* ===============Header styles=================== */
 
 
 
@@ -237,4 +237,331 @@ nav a {
 #desktop-header-left-items { /* This ID should be on your desktop's .nav-container.left */
     display: flex; /* Or its original display type */
     align-items: center;
+}
+
+
+/* ====================Hero section styles====================== */
+.hero {
+    height: 100vh;
+    /* Viewport units are relative to viewport, so they scale with zoom naturally in terms of proportion */
+    width: 100vw;
+    /* Same as above */
+    position: relative;
+    background:
+        url('../img/oppenheimer-bg1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 33%;
+    /* Percentage, scales with parent */
+    /* padding: 0 4rem; -> 0 3.2rem */
+    padding: 0 3.2rem;
+}
+
+.movie-title {
+    width: 100%;
+    /* font-size: 3.3rem; -> 2.64rem */
+    font-size: 2.68rem;
+    /* margin-bottom: 0.5rem; -> 0.4rem */
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 0rem;
+    /* No change */
+    white-space: nowrap;
+}
+
+.persian-movie-title {
+    color: #777;
+    /* font-size: 1rem; -> 0.8rem */
+    font-size: 0.8rem;
+    /* margin-bottom: 1rem; -> 0.8rem */
+    margin-bottom: 0.8rem;
+}
+
+.movie-card {
+    background-color: inherit;
+    position: relative;
+    /* top: 4rem; -> 3.2rem */
+    top: 3.2rem;
+    /* padding: 1.5rem; -> 1.2rem */
+    padding: 1.2rem;
+    /* border-radius: 10px; -> 8px */
+    border-radius: 8px;
+    /* backdrop-filter: blur(5px); -> blur(4px) */
+    backdrop-filter: blur(4px);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); -> 0 3.2px 9.6px */
+    box-shadow: 0 3.2px 9.6px rgba(0, 0, 0, 0.2);
+    /* margin-bottom: 2rem; -> 1.6rem */
+    margin-bottom: 1.6rem;
+    width: 100%;
+}
+
+.movie-summary {
+    /* margin-bottom: 1.5rem; -> 1.2rem */
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    /* Unitless, no change */
+    /* font-size: 0.9rem; -> 0.72rem */
+    font-size: 0.72rem;
+}
+
+.movie-summary p {
+    text-align: justify;
+}
+
+.movie-summary-text {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.movie-summary h3 {
+    /* font-size: 1.5rem; -> 1.2rem */
+    font-size: 1.2rem;
+    /* margin-bottom: 0.5rem; -> 0.4rem */
+    margin-bottom: 0.4rem;
+    color: white;
+    font-weight: 500;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 1.5rem; -> 1.2rem */
+    margin-bottom: 1.2rem;
+}
+
+.genre {
+    /* margin-bottom: 1rem; -> 0.8rem */
+    margin-bottom: 0.8rem;
+    /* font-size: 1rem; -> 0.8rem */
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+}
+
+.genere-header {
+    /* font-size: 1.5rem; -> 1.2rem */
+    font-size: 1.2rem;
+    color: white;
+}
+
+.ratings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 1.5rem; -> 1.2rem */
+    margin-bottom: 1.2rem;
+    /* gap: 3rem; -> 2.4rem */
+    gap: 2.4rem;
+}
+
+.imdb-rating {
+    display: flex;
+    align-items: center;
+}
+
+.imdb-logo {
+    background-color: #f5c518;
+    /* border-radius: 0.2rem; -> 0.16rem */
+    border-radius: 0.16rem;
+    color: black;
+    /* padding: 0.2rem 0.4rem; -> 0.16rem 0.32rem */
+    padding: 0.16rem 0.32rem;
+    font-weight: bold;
+    /* font-size: 1rem; -> 0.8rem */
+    font-size: 0.8rem;
+    /* margin-right: 0.5rem; -> 0.4rem */
+    margin-right: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-value {
+    /* font-size: 1.3rem; -> 1.04rem */
+    font-size: 1.04rem;
+}
+
+.first-rating {
+    color: #f5c518;
+}
+
+.duration {
+    display: flex;
+    align-items: center;
+    /* font-size: 1.3rem; -> 1.04rem */
+    font-size: 1.04rem;
+}
+
+.duration svg {
+    /* margin-right: 0.5rem; -> 0.4rem */
+    margin-right: 0.4rem;
+    /* width: 2rem; -> 1.6rem */
+    width: 1.6rem;
+    /* height: 2rem; -> 1.6rem */
+    height: 1.6rem;
+    color: #f5c518;
+}
+
+.exact-duration {
+    /* margin-right: 0.2rem; -> 0.16rem */
+    margin-right: 0.16rem;
+}
+
+.watch-button {
+    background-color: #e41e3f;
+    color: white;
+    border: none;
+    /* border-radius: 5px; -> 4px */
+    border-radius: 4px;
+    /* padding: 0.7rem 1.5rem; -> 0.56rem 1.2rem */
+    padding: 0.56rem 1.2rem;
+    cursor: pointer;
+    /* font-size: 1.2rem; -> 0.96rem */
+    font-size: 0.96rem;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.watch-button:hover {
+    background-color: #ff2c4f;
+    /* transform: translateY(-2px); -> translateY(-1.6px) */
+    transform: translateY(-1.6px);
+    /* box-shadow: 0 4px 8px rgba(228, 30, 63, 0.3); -> 0 3.2px 6.4px */
+    box-shadow: 0 3.2px 6.4px rgba(228, 30, 63, 0.3);
+}
+
+/* Slider indicators */
+.slider-indicators {
+    position: absolute;
+    /* bottom: 1rem; -> 0.8rem */
+    bottom: 0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.indicator {
+    /* width: 1.3rem; -> 1.04rem */
+    width: 1.04rem;
+    /* height: 1.3rem; -> 1.04rem */
+    height: 1.04rem;
+    background-color: #e41e3f;
+    /* Original was commented out, I'm assuming you want the #e41e3f */
+    border-radius: 50%;
+    /* margin: 0 0.7rem; -> 0 0.56rem */
+    margin: 0 0.56rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #e41e3f;
+    /* width: 1.9rem; -> 1.52rem */
+    width: 1.52rem;
+    /* height: 1.9rem; -> 1.52rem */
+    height: 1.52rem;
+    /* box-shadow: 0 0 0.9rem 0.4rem rgba(228, 30, 63, 0.8); -> 0 0 0.72rem 0.32rem */
+    box-shadow: 0 0 0.72rem 0.32rem rgba(228, 30, 63, 0.8);
+    position: relative;
+}
+
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.indicator.active:hover {
+    background-color: #e41e3f;
+}
+
+.slider-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 3.7rem; -> 2.96rem */
+    width: 2.96rem;
+    /* height: 3.7rem; -> 2.96rem */
+    height: 2.96rem;
+    background-color: rgba(40, 40, 40, 0.7);
+    color: #e41e3f;
+    /* font-size: 3rem; -> 2.4rem */
+    font-size: 2.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    /* margin: 0 10px; -> 0 8px */
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.slider-arrow span {
+    position: relative;
+    /* top: 0.3100rem; -> 0.248rem */
+    top: 0.248rem;
+    /* right: 0.0625rem; -> 0.05rem */
+    right: 0.05rem;
+    padding: 0;
+}
+
+
+.slider-arrow:hover {
+    background-color: rgba(63, 61, 61, 0.8);
+    color: #ff2c4f;
+    transform: scale(1.2);
+    /* Scale factor itself doesn't change */
+    /* box-shadow: 0 0 0.6rem 0.2rem rgba(228, 30, 63, 0.4); -> 0 0 0.48rem 0.16rem */
+    box-shadow: 0 0 0.48rem 0.16rem rgba(228, 30, 63, 0.4);
+}
+
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    /* Percentage, scales with parent */
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(to left,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.7) 50%,
+            rgba(0, 0, 0, 0.5) 80%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+/* Animation */
+@keyframes fadeInOverlay {
+    from {
+        background: linear-gradient(to left, transparent 0%, transparent 100%);
+    }
+
+    to {
+        background: linear-gradient(to left, black 0%, transparent 100%);
+    }
+}
+
+/* Responsive styles */
+/* If these breakpoints were chosen based on how they looked at 80% zoom,
+   then the pixel values for the breakpoints should also be scaled.
+   992px * 0.8 = 793.6px (approx 794px)
+   768px * 0.8 = 614.4px (approx 614px)
+   If they are standard device breakpoints, you might leave them.
+   Assuming you want to scale them:
+*/
+@media (max-width: 1024px) {
+
+    /* Was 992px */
+    .hero-content {
+        width: 70%;
+        /* Percentage, scales with parent */
+    }
 }
