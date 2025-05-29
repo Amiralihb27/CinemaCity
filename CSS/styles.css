@@ -565,3 +565,182 @@ nav a {
         /* Percentage, scales with parent */
     }
 }
+
+/*================== search section =======================*/
+.search-section {
+    background-color: #303030;
+    margin-bottom: 30px;
+}
+
+.search-section .container {
+    padding: 0;
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    background-color: #202020;
+    height: 80px;
+    padding: 11px 18px;
+    border-radius: 8px;
+}
+
+.search-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    width: 50%;
+}
+
+.simple-search {
+    flex: 1;
+    display: flex;
+    width: 50%;
+    height: 50px;
+    position: relative;
+}
+
+.search-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.simple-search input {
+    width: 100%;
+    height: 50px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.simple-search input::placeholder {
+    font-size: 1rem;
+}
+
+.search-btn {
+    position: absolute;
+    right: auto;
+    left: 8px;
+    top: 4px;
+    background-color: #df2144;
+    color: #ffffff;
+    padding: 0 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 96px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.advanced-search-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #202020;
+    height: 76px;
+    padding: 18px 25px;
+    border-radius: 8px;
+}
+
+.toggle-search {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.advanced-search {
+    background-color: #4b4b4b;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.search-row {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 15px;
+}
+
+.search-actions {
+    width: 906px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 283px;
+}
+
+.search-field:last-child {
+    margin-left: 0;
+}
+
+.search-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.search-field input {
+    direction: ltr;
+    padding: 3px 0 3px 9px;
+}
+
+.search-field select {
+    padding: 1px 4px;
+}
+
+.search-field select,
+.search-field input {
+    width: 194px;
+    height: 27px;
+    background-color: #333333;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.not-selected {
+    width: 155px !important;
+}
+
+.order {
+    width: 216px !important;
+}
+
+.search-field option {
+    color: white;
+}
+
+.reset-btn,
+.advanced-search-btn {
+    padding: 8px 36px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.reset-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.advanced-search-btn {
+    background-color: #df2144;
+    color: #ffffff;
+    width: 224px;
+    font-size: 18px;
+}
