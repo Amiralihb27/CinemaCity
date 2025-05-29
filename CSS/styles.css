@@ -1495,5 +1495,305 @@ nav a {
     color: #4285f4;
 }
 
+/****************footer***************/
+
+footer {
+    background-color: #222222;
+    /* Dark gray footer background */
+    color: #ffffff;
+    padding: 40px 0px 80px 20px;
+
+    /* Added more bottom padding to accommodate shape */
+    min-height: 450px;
+    position: relative;
+    /* For the absolute positioned decorative shape */
+    overflow: hidden;
+    /* To contain the decorative shape if it bleeds */
+    direction: rtl;
+    /* Right-to-left for content */
+}
+
+.footer-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Align items to the top of their container */
+    gap: 30px;
+    /* Space between left and right sections */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+}
+
+.footer-left {
+    flex: 3;
+    /* Takes more space, roughly 60% */
+    min-width: 300px;
+    /* Minimum width before wrapping */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    left: 0rem;
+    /* Space between logo-banner, intro, and contact */
+
+}
+
+.logo-banner {
+    background-color: #e41e3f;
+    /* Red color */
+    color: #ffffff;
+    padding: 20px 30px;
+    height: 120px;
+    font-size: 1.6em;
+    font-weight: bold;
+    border-bottom-left-radius: 71px;
+    /* Curved bottom-left corner */
+    text-align: right;
+    display: flex;
+    align-items: center;
+    /* Ensure text aligns right within the banner */
+}
+
+.logo-banner .logo-text {
+    color: #3498db;
+    /* Blue color for "logo" */
+    margin-left: 2rem;
+    font-size: 2rem;
+    /* Space after "logo" */
+}
+
+.intro-text {
+    font-size: 1.0rem;
+
+    line-height: 1.7;
+    color: #cccccc;
+    text-align: justify;
+    /* Justify text for a cleaner look */
+    margin-bottom: 15px;
+    margin-right: 95px;
+    /* Space below paragraph */
+}
+
+.logo-banner .bold-text {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.footer-contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    /* Pushes this to the bottom of footer-left if space allows */
+    padding-top: 10px;
+    /* margin-right: 95px; */
+    /* Some space above it */
+    flex-wrap: wrap;
+    /* Allow phone and icons to stack on small screens */
+    gap: 70px;
+}
+
+.phone-number {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    /* Space between icons */
+}
+
+.social-icons img {
+    width: 36px;
+    height: 36px;
+    /* filter: invert(1) brightness(1.5); Optional: if your icons are dark */
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+    opacity: 0.8;
+}
+
+.footer-right {
+    flex: 3;
+    display: flex;
+    justify-content: center-between;
+    /* Distribute link columns */
+    align-items: center;
+    gap: 20px;
+    /* Space between link columns */
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    /* Allow columns to wrap */
+    min-width: 300px;
+    /* Minimum width before wrapping */
+
+}
+
+.links-column {
+    flex: 1;
+    /* Each column takes equal space within footer-right */
+    min-width: 150px;
+    /* Minimum width for a link column */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.links-column h4 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+    width: 100%;
+    /* Underline for titles */
+    color: #efefef;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    /* Distribute link columns */
+    align-items: center;
+}
+
+.links-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 120px;
+}
+
+.links-column ul li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    /* Distribute link columns */
+    align-items: center;
+    /* width: 110px; */
+}
+
+.links-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    white-space: wrap;
+    /* Prevent words from breaking */
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.links-column ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Specific styling for the English links column */
+.english-links-column {
+    direction: rtl;
+    /* Left-to-right for English text */
+    text-align: right;
+    /* Align English text to the left */
+}
+
+.english-links-column ul li a {
+    white-space: wrap;
+    text-decoration: underline;
+    /* Ensure no break for english links too */
+}
+
+
+.decorative-bottom-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* Positioned at the bottom left */
+    width: 280px;
+    /* As per your description of "numbers you see" */
+    height: 70px;
+    /* As per your description of "numbers you see" */
+    background-color: #e41e3f;
+    /* Red color */
+    border-top: 4px solid #3498db;
+    /* Blue top border */
+    border-top-right-radius: 60px;
+    /* Curve on the top-right */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        /* Stack left and right sections */
+        align-items: center;
+        /* Center them when stacked */
+        text-align: center;
+        /* Center text within stacked items */
+    }
+
+    .footer-left,
+    .footer-right {
+        flex: none;
+        /* Remove flex sizing */
+        width: 100%;
+        /* Take full width when stacked */
+        max-width: 500px;
+        /* Optional: constrain width when centered */
+        align-items: center;
+        /* Center content within footer-left */
+        text-align: center;
+        /* Center text */
+    }
+
+    .footer-left .intro-text {
+        text-align: center;
+        /* Center intro text too */
+    }
+
+    .logo-banner {
+        border-bottom-left-radius: 0;
+        /* Optional: remove curve on small screens or adjust */
+        border-radius: 10px;
+        /* Or make all corners slightly rounded */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-contact-info {
+        justify-content: center;
+        /* Center phone and icons */
+        width: 100%;
+    }
+
+    .footer-right {
+        justify-content: space-around;
+        /* Better distribution for wrapped columns */
+        margin-top: 30px;
+    }
+
+    .links-column,
+    .english-links-column {
+        text-align: center;
+        /* Center link column text */
+        min-width: 130px;
+        /* Adjust min-width for better wrapping */
+    }
+
+    .english-links-column {
+        text-align: center;
+        /* Also center English links */
+    }
+
+    .decorative-bottom-shape {
+        width: 200px;
+        height: 50px;
+        border-top-right-radius: 40px;
+    }
+}
+
+
 
 
