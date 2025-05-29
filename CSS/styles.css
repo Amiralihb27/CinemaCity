@@ -952,12 +952,12 @@ nav a {
     font-size: 0.8rem;
     line-height: 1.5;
     height: 50%;
-    max-height: 115px;
+    max-height: 75px;
     overflow: hidden;
     margin-bottom: 0.5rem;
     line-height: 1.5;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     text-align: justify;
     flex-grow: 1;
@@ -967,9 +967,9 @@ nav a {
 .suggested-meta-info {
     display: flex;
     justify-content: space-between;
-
+    margin-top: 3rem;
     gap: 1rem;
-    margin-top: 1.5rem;
+
 }
 
 .suggested-meta-item {
@@ -979,14 +979,14 @@ nav a {
 
 .suggested-meta-label {
     color: #e41e3f;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.3rem;
 }
 
 .suggested-meta-value {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
 /* Movie Title Outside Card */
@@ -1053,4 +1053,244 @@ nav a {
         font-size: 0.75rem;
     }
 }
+
+/*=====================highlight======================*/
+
+
+
+/* Movie Banner Section */
+.movie-banner-section {
+    background-color: #303030;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.movie-banner-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Full Width Banner Background */
+.movie-banner-background {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.movie-banner-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.6) 25%,
+            rgba(0, 0, 0, 0.3) 50%,
+            transparent 100%);
+}
+
+/* Movie Card Overlay (22% width, left side) */
+.movie-banner-card {
+    position: absolute;
+    top: 0;
+    left: 0.8rem;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Movie Card Content */
+.movie-banner-content {
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Movie Title English */
+.banner-movie-title-en {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    margin: 0 0 0.3rem 0;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Persian Title */
+.banner-movie-title-fa {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+}
+
+/* Story Header */
+.banner-story-header {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+/* Story Summary */
+.banner-story-summary {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.4;
+    margin: 0 0 1rem 0;
+    text-align: justify;
+}
+
+/* Genre Section */
+.banner-genre-section {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.8rem 0;
+    /* border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.banner-genre-label {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.banner-genre-value {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Rating Section */
+.banner-rating-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner-imdb-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.banner-imdb-logo {
+    background-color: #f5c518;
+    color: black;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 0.6rem;
+}
+
+.banner-rating-value {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.banner-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: white;
+}
+
+.banner-clock-icon {
+    color: #f5c518;
+    width: 14px;
+    height: 14px;
+}
+
+.banner-duration-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Button Section */
+.banner-button-section {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-download-button {
+    background-color: #e41e3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(228, 30, 63, 0.3);
+    width: 100%;
+}
+
+.banner-download-button:hover {
+    background-color: #ff2c4f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(228, 30, 63, 0.4);
+}
+
+.movie-banner-section .slider-indicators {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .movie-banner-container {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .movie-banner-card {
+        width: 25%;
+    }
+}
+
+@media (max-width: 992px) {
+    .movie-banner-background {
+        height: 300px;
+    }
+
+    .movie-banner-card {
+        width: 30%;
+    }
+
+    .banner-movie-title-en {
+        font-size: 1.3rem;
+    }
+
+    .movie-banner-content {
+        padding: 1rem;
+    }
+}
+
 
