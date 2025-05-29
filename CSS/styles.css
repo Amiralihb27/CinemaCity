@@ -1,0 +1,240 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+button {
+    font-family: "Vazirmatn", sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1256px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    background-color: #303030;
+    color: #ffffff;
+    direction: rtl;
+    overflow-x: hidden;
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+
+/* Header styles */
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 0.64rem 1.28rem;
+    position: absolute;
+    
+    top: 1.6rem;
+   
+    right: 3.2rem;
+    left: 0;
+    z-index: 100;
+}
+
+.logo-card {
+    
+    border-left: 1.6px solid white; 
+    padding-left: 6.4px;
+    margin-left: 0.8rem;
+    color: white;
+    direction: rtl;
+    font-family: sans-serif;
+    width: fit-content;
+    background-color: inherit;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.logo-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.square {
+    width: 3rem;
+    height: 1.8rem;
+    background-color: #e41e3f;
+    border-radius: 0.4rem;
+}
+
+.title {
+    font-size: 0.75rem;
+    text-align: justify;
+    font-weight: bold;
+    margin-left: 0.56rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    height: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container.left {
+    position: relative;
+    left: 1.6rem;
+}
+
+
+nav ul {
+    display: flex;
+    font-size: 0.8rem;
+    column-gap: 1.6rem;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 0.6rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    /* font-size: 1.4rem; -> 1.12rem */
+    font-size: 1.12rem;
+}
+
+.has-submenu {
+    display: flex;
+    align-items: center;
+
+}
+
+.arrow-down {
+    transform: rotate(-90deg);
+    color: #e41e3f;
+    margin-right: 1.6rem;
+
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.has-submenu:hover .arrow-down {
+    transform: translateY(1.6px);
+}
+
+.active {
+    border-bottom: 2.4px solid #e41e3f;
+    padding-bottom: 2.4px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(35, 35, 35, 0.8);
+    border-radius: 0.4rem;
+    padding: 0.32rem 0.8rem;
+    margin-right: 2rem;
+    margin-left: 0.64rem;
+    height: 2.16rem;
+    position: relative;
+    left: 1.6rem;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    width: 19rem;
+    font-size: 0.8rem;
+    margin-right: 4px;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.04rem;
+}
+
+.search-box svg {
+    stop-color: white;
+    margin-left: 4px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.auth-button {
+    background-color: #e41e3f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    width: 9.6rem;
+    cursor: pointer;
+    font-size: 0.88rem;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #ff2c4f;
+    transform: translateY(-1.6px);
+    box-shadow: 0 3.2px 6.4px rgba(228, 30, 63, 0.3);
+}
+
+.auth-button.login {
+    background-color: transparent;
+    color: #e41e3f;
+    border: 0.8px solid #e41e3f;
+}
+
+.auth-button.login:hover {
+    background-color: rgba(228, 30, 63, 0.1);
+    border-color: #ff2c4f;
+}
+
+
+/* Hide mobile-specific icon container on desktop */
+.mobile-header-icons {
+    display: none;
+}
+
+/* Ensure desktop left items are visible by default */
+#desktop-header-left-items { /* This ID should be on your desktop's .nav-container.left */
+    display: flex; /* Or its original display type */
+    align-items: center;
+}

@@ -1,0 +1,36 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS-specific files
+*.swp
+*.bak
+*.tmp
+
+# Optional: ignore image cache or output if needed
+*.log
+
+# Node-related (only if you're using node tools like live-server)
+node_modules/
+npm-debug.log*
+
+# Optional: ignore built or minified files if you're generating them
+dist/
+build/
+*.min.css
+*.min.js
+
+# Ignore env/config files (if applicable)
+.env
+.env.local
+
+# Optional: ignore image source files if img/ contains only raw uploads
+# Uncomment this if you want to ignore all images (not recommended for static HTML apps)
+# img/*
+# !img/.gitkeep
