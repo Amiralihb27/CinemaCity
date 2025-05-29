@@ -757,3 +757,300 @@ nav a {
     width: 224px;
     font-size: 18px;
 }
+
+/*======================suggested movies=======================*/
+
+.suggested-movies-section {
+    background-color: #303030;
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+
+.suggested-movies-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Header */
+.suggested-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.suggested-section-title {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+.suggested-navigation-arrows {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.suggested-nav-arrow {
+    background-color: #1E1E1E;
+    border: 1px solid #1E1E1E;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.suggested-nav-arrow .right-arrow {
+    transform: rotate(180deg);
+}
+
+.suggested-nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* border-color: #e41e3f; */
+    transform: scale(1.1);
+    transform: translateY(-2px);
+}
+
+/* Movies Grid */
+.suggested-movies-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Suggested Movie Card */
+.suggested-movie-card {
+    position: relative;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.suggested-movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.suggested-movie-poster {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 7/10;
+    background: linear-gradient(135deg, #333 0%, #222 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    isolation: isolate;
+}
+
+.suggested-movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.suggested-movie-card:hover .suggested-movie-poster img {
+    transform: scale(1.05);
+}
+
+/* Always Visible Info Overlay */
+.suggested-movie-info-overlay {
+    /* position: absolute; */
+    /* bottom: 0; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    background-color: #303030;
+    box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* IMDb Rating */
+.suggested-imdb-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.suggested-imdb-logo {
+    background-color: #f5c518;
+    color: black;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.suggested-rating-value {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Duration */
+.suggested-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: white;
+}
+
+.suggested-clock-icon {
+    color: #f5c518;
+
+}
+
+.suggested-duration-value {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Movie Details on Hover */
+.suggested-movie-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    /* display: flex;
+    flex-direction: column; */
+    color: white;
+}
+
+.suggested-movie-card:hover .suggested-movie-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Story Title */
+.suggested-story-title {
+    color: #e41e3f;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Story Summary */
+.suggested-story-summary {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    height: 50%;
+    max-height: 115px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+    flex-grow: 1;
+}
+
+/* Meta Info */
+.suggested-meta-info {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.suggested-meta-item {
+    flex: 1;
+    text-align: center;
+}
+
+.suggested-meta-label {
+    color: #e41e3f;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.suggested-meta-value {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.75rem;
+}
+
+/* Movie Title Outside Card */
+.suggested-movie-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* View All Button */
+.suggested-view-all-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.suggested-view-all-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: 2px solid #1EB7E8;
+    color: #1EB7E8;
+    padding: 0.6rem 1.5rem;
+    border-radius: 1px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.suggested-view-all-button:hover {
+    background-color: #1EB7E8;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(41, 153, 244, 0.3);
+}
+
+.suggested-view-all-button svg {
+    transform: rotate(0deg);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .suggested-movies-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .suggested-movies-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .suggested-section-title {
+        font-size: 1.5rem;
+    }
+
+    .suggested-story-summary {
+        font-size: 0.75rem;
+    }
+}
+
