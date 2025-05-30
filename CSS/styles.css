@@ -1007,8 +1007,10 @@ nav a {
 }
 
 .suggested-movie-title-text {
-    direction: ltr; /* Force left-to-right */
-    text-align: center; /* Align text to left within LTR context */
+    direction: ltr;
+    /* Force left-to-right */
+    text-align: center;
+    /* Align text to left within LTR context */
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -2220,7 +2222,8 @@ footer {
         transform: rotate(0deg);
         /* Makes right-pointing chevron point left for RTL "View All <" */
     }
-        /* --- Movies Grid (Horizontal Scroll) --- */
+
+    /* --- Movies Grid (Horizontal Scroll) --- */
     .suggested-movies-grid {
         display: flex;
         overflow-x: auto;
@@ -2383,6 +2386,244 @@ footer {
         /* Hide desktop SVG clock icon */
         display: none;
     }
+
+    /* --- Movie Banner Section (The Batman 2022) --- */
+    .movie-banner-section {
+        margin: 10px 0 0 0;
+        padding: 0;
+        background-color: #303030;
+        /* Section background */
+    }
+
+    .movie-banner-container {
+        width: 100%;
+        padding: 0 10px;
+        /* Padding for the container */
+        box-sizing: border-box;
+        margin: 0 auto;
+        /* Centering the container */
+    }
+
+    .movie-banner-background {
+        position: relative;
+        width: 100%;
+        height: auto;
+        /* Allow height to be determined by content + min-height */
+        min-height: 180px;
+        /* Minimum height for the banner */
+        display: flex;
+        align-items: flex-end;
+        /* Align card to the bottom of the banner */
+        justify-content: flex-end;
+        /* MODIFIED: Positions flex items to the end (visual left in RTL) */
+        background-color: #1C1C1E;
+        /* Background of the banner itself */
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 12px;
+        /* Padding inside the banner, around the card */
+        box-sizing: border-box;
+        box-shadow: none;
+        /* Remove desktop shadow */
+    }
+
+    .movie-banner-background>img {
+        /* Background image for the banner */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        opacity: 0.7;
+        /* Dimming the background image */
+        object-position: center;
+    }
+
+    .banner-overlay {
+        /* Gradient overlay on top of the image */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(28, 28, 30, 0.85) 10%, rgba(28, 28, 30, 0.4) 40%, transparent 80%);
+        z-index: 2;
+    }
+
+    .movie-banner-card {
+        position: relative;
+        z-index: 3;
+        width: 55%;
+        /* MODIFIED: Reduced from 65% to make it more to the left */
+        max-width: 360px;
+        /* MODIFIED: Adjusted max-width if needed, optional */
+        height: auto;
+        color: #fff;
+        text-align: right;
+        padding: 0;
+        background-color: transparent;
+        backdrop-filter: none;
+        display: block;
+        border-radius: 0;
+    }
+
+    .movie-banner-content {
+        /* Actual text content area */
+        max-width: 100%;
+        /* MODIFIED: Content takes full width of the .movie-banner-card */
+        width: 100%;
+        padding: 10px;
+        /* Inner padding for the text content */
+        height: auto;
+        display: block;
+    }
+
+    .banner-movie-title-en {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 1px;
+        line-height: 1.2;
+        text-shadow: none;
+    }
+
+    h2.banner-movie-title-fa {
+        display: none;
+        /* Hidden on mobile */
+    }
+
+    .banner-story-header {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 3px;
+        color: #F5F5F5;
+    }
+
+    .banner-story-summary {
+        font-size: 10px;
+        line-height: 1.4;
+        margin-bottom: 6px;
+        color: #C7C7CC;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* Limit to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: right;
+        /* Text alignment for RTL */
+    }
+
+    .banner-genre-section {
+        margin-bottom: 6px;
+        font-size: 10px;
+        padding: 5px 0;
+        text-align: right;
+        /* Text alignment for RTL */
+    }
+
+    .banner-genre-label {
+        color: #AEAEB2;
+        display: inline-block;
+        margin-left: 3px;
+        /* This will be to the right of the value in RTL */
+        font-size: 10px;
+        font-weight: normal;
+    }
+
+    .banner-genre-value {
+        color: #D1D1D6;
+        display: inline;
+        font-size: 10px;
+    }
+
+    .banner-rating-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-start;
+        /* Align items to the start (right in RTL) */
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .banner-duration,
+    .banner-imdb-rating {
+        display: flex;
+        align-items: center;
+        color: #C7C7CC;
+    }
+
+    .banner-imdb-rating .banner-rating-value {
+        color: #C7C7CC;
+        padding: 1px 0px;
+        border-radius: 3px;
+        font-weight: bold;
+
+        font-size: 10px;
+
+    }
+
+    .banner-duration .banner-duration-value {
+        margin-left: 2px;
+        font-size: 11px;
+        font-weight: normal;
+    }
+
+    .banner-imdb-logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-duration .banner-clock-icon {
+        width: 19px;
+        height: 19px;
+        stroke: #f5c518;
+    }
+
+    .banner-button-section {
+        display: none;
+        /* Hidden on mobile */
+    }
+
+    /* Slider Arrows for Batman Banner - if .slider-arrow elements are in its HTML */
+    .movie-banner-background .slider-indicators {
+        position: absolute;
+        bottom: 10px;
+        /* If card is on the left, arrows might look better on the right or centered if space allows */
+        right: 10px;
+        /* Keeping on the right for now */
+        z-index: 40;
+        width: 200px;
+        display: flex;
+        gap: 6px;
+    }
+
+    .movie-banner-background .slider-indicators .slider-arrow {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    /* .movie-banner-background .slider-indicators .slider-arrow span {
+        display: block;
+    }
+
+    .movie-banner-background .slider-indicators .indicator {
+        display: none;
+    } */
+
+    /* --- Bottom Navigation Bar (Repurposing Footer Columns) --- */
 
 
 
