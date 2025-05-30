@@ -998,7 +998,26 @@ nav a {
     font-weight: 600;
     margin-top: 0.8rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 1.3;
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+}
+
+.suggested-movie-title-text {
+    direction: ltr; /* Force left-to-right */
+    text-align: center; /* Align text to left within LTR context */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
 }
 
 /* View All Button */
@@ -2201,6 +2220,170 @@ footer {
         transform: rotate(0deg);
         /* Makes right-pointing chevron point left for RTL "View All <" */
     }
+        /* --- Movies Grid (Horizontal Scroll) --- */
+    .suggested-movies-grid {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 12px;
+        padding: 0 15px 10px 15px;
+        margin-bottom: 0;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .suggested-movies-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* --- Individual Movie Card --- */
+    .suggested-movie-card {
+        flex: 0 0 110px;
+        /* All cards have the same base width */
+        display: flex;
+        flex-direction: column;
+        /* Children will stack vertically */
+        background-color: transparent;
+        text-align: right;
+        position: relative;
+        transition: none;
+        justify-content: flex-start;
+    }
+
+    .suggested-movie-card:hover {
+        transform: none;
+    }
+
+    /* Visual Order: Poster -> Title -> Info Overlay */
+    .suggested-movie-poster {
+        position: relative;
+        width: 100%;
+        padding-top: 150%;
+        /* Aspect ratio for poster height (height = 1.5 * width). This makes it taller than wide. */
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 6px;
+        background-color: #3A3A3C;
+        box-shadow: none;
+        isolation: static;
+        order: 1;
+        /* First item */
+    }
+
+    .suggested-movie-poster img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: none;
+    }
+
+    .suggested-movie-card:hover .suggested-movie-poster img {
+        transform: none;
+    }
+
+    /* Hide desktop hover details overlay */
+    .suggested-movie-details {
+        display: none !important;
+    }
+
+    /* Movie Title (Below Poster, same width as poster) */
+    .suggested-movie-title {
+        font-size: 12px;
+        color: #D1D1D1;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        line-height: 1.3;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        /* Takes full width of .suggested-movie-card */
+        order: 2;
+        /* Second item */
+        text-align: left;
+        max-width: 110px;
+    }
+
+    /* Info Row (IMDb & Duration) - Below Title */
+    .suggested-movie-info-overlay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        /* Takes full width of .suggested-movie-card */
+        margin-top: 0;
+        gap: 5px;
+        order: 3;
+        /* Third item */
+    }
+
+    /* IMDb Rating (Part of Info Row) */
+    .suggested-imdb-rating {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        order: 1;
+        /* For RTL with space-between: right side */
+    }
+
+    .suggested-imdb-rating img.imdb-icon {
+        /* Class for your IMDb image */
+        width: 18px;
+        height: 15px;
+        object-fit: contain;
+    }
+
+    .suggested-imdb-rating .suggested-rating-value {
+        font-size: 10px;
+        color: #8E8E93;
+        font-weight: normal;
+    }
+
+    .suggested-imdb-rating .suggested-imdb-logo {
+        /* Hide desktop styled IMDb box */
+        display: none;
+    }
+
+
+
+    /* Duration (Part of Info Row) */
+    .suggested-duration {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        order: 0;
+        /* For RTL with space-between: left side */
+    }
+
+    .suggested-duration img.clock-icon {
+        /* Class for your Clock image */
+        width: 10px;
+        height: 10px;
+    }
+
+    .suggested-duration .suggested-duration-value {
+        font-size: 10px;
+        color: #8E8E93;
+        font-weight: normal;
+    }
+
+    .suggested-duration .suggested-clock-icon {
+        /* Hide desktop SVG clock icon */
+        display: none;
+    }
+
 
 
 }
